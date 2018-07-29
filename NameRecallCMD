@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class NameRecallCMD extends CalculatorCMD {
+	
+	public static void cmd1(String name1) {
+		System.out.println("Your name is " + name1); // 
+		
+	}
+	public static void cmd2(double num1, double num2) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+		num1 = userInput.nextDouble(); // The first number that will be operated on the second
+		num2 = userInput.nextDouble(); // The second number that will be operated
+		
+		// Variables that will be called 
+		double sum;
+		double difference;
+		double product;
+		double quotient;
+		double remainder;
+		
+		// Operations for each variable
+		sum = num1 + num2;
+		difference = num1 - num2;
+		product = num1 * num2;
+		quotient = num1 / num2;
+		remainder = num1 % num2;
+		
+		// Tells user to print first and second number
+		System.out.println(num1);
+		System.out.println(num2);
+		
+		String result = userInput.nextLine();
+		
+		String resultSum = "Sum";
+		String resultDifference = "Difference";
+		String resultQuotient = "Quotient";
+		String resultProduct = "Product";
+		String resultRemainder = "Remainder";
+		
+		
+		// Outputs an operation depending on which operation is called by user.
+		if(result == resultSum) {
+			
+			System.out.println(sum);
+			
+		}else if (result == resultDifference) {
+		
+			System.out.println(difference);
+			
+		}else if (result == resultProduct) {
+			
+			System.out.println(product);
+			
+		}else if (result == resultQuotient) {
+			
+			System.out.println(quotient);
+			
+		}else if(result == resultRemainder){
+			
+			System.out.println(remainder);
+			
+			
+		}
+	}
+	
+}
