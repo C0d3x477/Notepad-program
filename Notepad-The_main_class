@@ -11,13 +11,13 @@ public class Notepad extends NameRecallCMD {
 		
 		System.out.println("First lets get you familiar with some basic commands. Please enter your first name: ");
 		
-			String userFirstName = userInput.nextLine(); // Allows user to input
+			String userFirstName = userInput.nextLine(); // Allows user to input first name
 		
 		System.out.println("Your first name is " + userFirstName + "!");
 		
 		System.out.println("Now enter your last name: ");
 		
-			String userLastName = userInput.nextLine();
+			String userLastName = userInput.nextLine(); // Allows user to input last name
 		
 		System.out.println("Your last name is " + userLastName + "!");
 		
@@ -25,21 +25,23 @@ public class Notepad extends NameRecallCMD {
 			
 			String cmd;
 		
-		cmd = userInput.nextLine();
+		cmd = userInput.nextLine(); // Gets the user to input Strings for switch statements
 		
 		boolean running = true;
 			
 
 				switch(cmd) {
+				// Calls NameRecallCMD if user inputs nameinfo
 				case "nameinfo":
-					cmd1(userFirstName + userLastName);
+					cmd1(userFirstName + userLastName); // Calls NameRecallCMD method
 					break;
+				// Calls CalculatorCMD if user inputs calculator
 				case "calculator":
 					
 					double num1 = userInput.nextDouble();
 					double num2 = userInput.nextDouble();
 					
-					cmd2(num1, num2);
+					cmd2(num1, num2); // Calls cmd2() method
 					
 					break;
 				case "notepad":
