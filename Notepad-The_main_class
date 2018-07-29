@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Notepad extends NameRecallCMD {
+
+	public static void main(String[] args) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+			String welcome = "Welcome to the notpad program, write any thing you need to keep track of here: ";
+		
+		System.out.println(welcome); // Prints welcome message
+		
+		System.out.println("First lets get you familiar with some basic commands. Please enter your first name: ");
+		
+			String userFirstName = userInput.nextLine(); // Allows user to input
+		
+		System.out.println("Your first name is " + userFirstName + "!");
+		
+		System.out.println("Now enter your last name: ");
+		
+			String userLastName = userInput.nextLine();
+		
+		System.out.println("Your last name is " + userLastName + "!");
+		
+		System.out.println("If you want to recall certain information, we have commands to do just that; try the command 'nameinfo' ");
+			
+			String cmd;
+		
+		cmd = userInput.nextLine();
+		
+		boolean running = true;
+			
+
+				switch(cmd) {
+				case "nameinfo":
+					cmd1(userFirstName + userLastName);
+					break;
+				case "calculator":
+					
+					double num1 = userInput.nextDouble();
+					double num2 = userInput.nextDouble();
+					
+					cmd2(num1, num2);
+					
+					break;
+				case "notepad":
+					
+					
+					}
+				}
+}
